@@ -1,0 +1,130 @@
+  #contato{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f2f2f2;
+      font-size: 1rem;
+      gap: 40px;
+  }
+
+
+  .contato-imagem{
+      flex: 1; 
+      display: flex;
+      position: relative;
+  }
+
+  .contato-imagem img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* cobre totalmente o espaço, cortando se precisar */
+      display: block;
+  }
+
+
+  .contato-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+  }
+  .informacoes{
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+      text-align: left;
+      gap: 50px;
+  }
+
+  .contato-endereco h3, .contato-horario h3{
+    color: #3991fc;
+    margin-top: 50px;
+  }
+
+  .contato-formulario{
+    display: flex;
+    width: 100%;
+  }
+
+  .form-contato {  
+  flex: 1; /* faz ocupar todo espaço disponível */
+  max-width: 600px; /* mas nunca passar de 600px */
+  width: 100%; /* garante que ele use a largura dentro do limite */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+
+  .form-contato input,
+  .form-contato textarea,
+  .form-contato button {
+      padding: 12px;
+      font-size: 1rem;
+      border: 2px solid #a1e4dd;
+      box-sizing: border-box;
+  }
+
+
+  .form-contato input:focus,
+  .form-contato textarea:focus {
+      outline: none;
+      border: 2px solid  #3991fc;
+      box-shadow: 0 0 2px #3991fc;
+  }
+
+  .form-contato button {
+      padding: 12px;
+      font-size: 1rem;
+      background-color: #a1e4dd;
+      color: rgb(71,71,71);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  .form-contato button:hover {
+      background-color: #c5fcf6;
+  }
+
+  @media (max-width: 768px) {
+    #contato {
+      flex-direction: column;
+      gap: 30px;
+  
+    }
+
+    .contato-imagem,
+    .contato-info {
+      width: 100%;
+      max-width: 100%;
+    }
+
+
+    .contato-info {
+      padding: 0 20px; /* margem lateral no conteúdo */
+    }
+
+    .informacoes {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contato-formulario {
+      width: 100%;
+      max-width: 100%;
+    }
+    .form-contato input,
+    .form-contato textarea,
+    .form-contato button {
+      width: 100%;                  /* ocupam toda a largura disponível */
+      }
+
+      .contato-formulario button{
+        margin-bottom: 40px;
+      }
+  }

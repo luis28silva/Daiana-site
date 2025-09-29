@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Barriecito&family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Script&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Permanent+Marker&family=Praise&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rye&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Barriecito&family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Script&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Permanent+Marker&family=Playball&family=Praise&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rye&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #edede9;
+}
+
+.btn-desktop{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3991fc;
+    padding: 10px 14px;
+    font-weight: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #ffff;
+}
+
+.btn-desktop:hover{
+    background-color:#84bcff;
+    color: #ffff;
+}
+

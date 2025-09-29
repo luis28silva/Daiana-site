@@ -1,0 +1,110 @@
+header{
+    background-color:rgb(176, 240, 233);
+    width: 100%;
+    padding: 18px 5vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* fica sempre por cima */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+header.scrolled {
+    background-color: rgba(176, 240, 233, 0.699); /* fica mais forte ao rolar */
+    backdrop-filter: blur(8px); /* efeito vidro */
+}
+
+#navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 200px;
+    height: auto;
+}
+
+#desktop_list{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+.nav_item a{
+    text-decoration: none;
+    color: #3991fc;
+}
+
+
+/* troca a cor do menu */
+nav a {
+  color: #3991fc; /* azul do logo */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3991fc; /* marrom do logo */
+}
+/* coloca efeito de linha no menu */
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #3991fc;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -3px;
+  left: 0;
+  background-color: #3991fc;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+.btn-mobile{
+    display: none;
+}
+
+#menu_mobile{
+    display: none;
+}
+
+@media screen and ( max-width:1170px) {
+    #desktop_list,
+    #navbar .btn-desktop{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #336eff;
+    }
+    #menu_mobile.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #mobile_list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_list .nav_item{
+        list-style: none;
+        text-align: center;
+    }
+}

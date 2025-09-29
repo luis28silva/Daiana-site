@@ -1,0 +1,180 @@
+
+        #home { 
+            padding-top: 93.96px;    
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            gap: 40px;
+        }
+
+
+        .home-imagem {
+            flex: 1;
+            display: flex;
+            position: relative; /* para controlar a imagem dentro */
+        }
+
+        .home-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* preenche e corta se necessário */
+            display: block;
+        }
+
+
+        .home-texto{
+            flex: 1;
+            display: flex;
+            background-image: url(../imagens/arvore-3.webp);
+            background-position: bottom;
+            background-size: cover;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .apresentacao{
+            max-width: 600px;
+            width: 100%;   /* garante que todos os elementos fiquem no mesmo bloco */      
+        }
+
+
+        .subtitulo {
+            color: #3991fc;
+            font-weight: 500;
+            position: relative;
+            padding-left: 50px;   /* espaço para a linha à esquerda */
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        .subtitulo::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;             /* centraliza verticalmente */
+            transform: translateY(-50%);
+            width: 50px;           /* comprimento da linha */
+            height: 2px;           /* espessura da linha */
+            background-color: #3991fc;
+        }
+
+        .ola{
+            color: #9d9792;
+            font-size: 4rem;
+            font-weight: 300;
+        }
+
+        .daia{
+            color: #7de3d3;
+            font-size: 5rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-align: left; 
+        }
+
+
+
+        .descricao{
+            color: #242424;
+            margin-top: 20px;
+            line-height: 25px;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            margin-top: 20px;
+            background-color:   #7de3d4b2;
+            color:  #242424;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .btn-whatsapp:hover {
+            background-color: #25D366;     
+            color: white;  
+            }
+
+
+            .rede{
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+                font-size: 1.8rem;
+                margin-top: 30px;          
+            }
+
+
+            .rede a{
+                color: #9d9792;
+                transition: color 0.3s ease;
+            }
+
+            .rede a:hover{
+                color: #3991fc;
+            }
+
+            .rede i {
+                cursor: pointer;
+            }
+
+
+
+        @media (max-width: 768px){
+            #home {
+                flex-direction: column;
+                align-items: center; /* centraliza tudo horizontalmente */
+                padding-top: 20px;
+                gap: 20px; /* reduz espaço entre imagem e texto */
+            }
+
+                    /* Mobile */
+        @media (max-width: 768px) {
+            #home {
+                padding-top: 60px; /* ajuste só para mobile */
+            }
+        }
+
+
+            .home-imagem, .home-texto {
+                width: 100%;
+            }
+
+            .home-texto {
+                align-items: center; /* centraliza o conteúdo no mobile */
+                text-align: left;
+                padding: 20px;
+            }
+
+            .titulo {
+                font-size: 3rem; /* reduz tamanho do título */
+            }
+
+           .subtitulo {
+                font-size: 1.5rem;
+                padding-left: 0;   /* remove o espaço lateral */
+            }
+
+            .subtitulo::before {
+                left: 0;            /* alinhada à esquerda do subtítulo */
+                top: 100%;          /* coloca a linha abaixo do texto */
+                transform: translateY(10px); /* espaçamento entre texto e linha */
+                width: 40px;        /* comprimento da linha continua */
+                height: 2px;        /* espessura continua */
+            }
+
+            .ola {
+                font-size: 2.5rem;
+            }
+
+            .descricao {
+                font-size: 0.9rem;
+            }
+        }
+
+

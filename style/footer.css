@@ -1,0 +1,93 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    background-color: #9d9792;
+    padding: 2rem;
+    color: #ffffff;
+  }
+
+  .footer-col img{
+    width: 70px;
+    height: auto;
+  }
+
+  .msn{
+    font-weight: normal;
+    font-family: 'playball', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+  }
+  .footer-col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #7de3d3;; /* ou outra das cores da paleta */
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-col i{
+    color: #7de3d3;
+  }
+  
+  .footer-col p,
+  .footer-col li {
+  line-height: 1.6; /* aumenta a altura entre as linhas */
+}
+
+  
+  .footer a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover{
+    color: #7de3d3;
+  }
+  
+  .social-icons i {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    color: #7de3d3;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons i:hover{
+    color: #b0f0e9;;
+  }
+
+  .direitos {
+    grid-column: 1 / -1; /* Faz ocupar todas as colunas */
+    background-color: rgb(88, 88, 88);
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+  }
+  
+
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      grid-template-columns: 1fr;
+    }
+
+  @media (max-width: 768px) {
+    .direitos {
+      padding: 20px 20px;
+    }
+
+    .direitos p {
+      max-width: 95%;
+    }
+}
+  }

@@ -1,0 +1,109 @@
+#servicos {
+  display: flex;
+  background-color: #7de3d4b2;
+  width: 100%;
+  min-height: 600px;
+  justify-content: center;
+  align-items: center; 
+  font-size: 1rem;
+  line-height: 1.5;
+  gap: 40px;
+}
+
+.coluna-esquerda{
+  flex: 1;
+}
+
+.coluna-direita{
+  flex: 1;
+}
+.servico-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espaço entre todos os elementos filhos (parágrafos e botão) */
+  max-width: 600px;
+  color: #424242;
+}
+
+
+.btn-leia-mais,
+a.btn-leia-mais {
+  display: inline-block; /* para o link se comportar como botão */
+  color: white; 
+  width: 180px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #3991fc;
+  text-decoration: none; /* remove underline do link */
+  text-align: center;    /* centraliza o texto do link */
+  transition: background-color 0.3s ease;
+  cursor: pointer;       /* muda o cursor pra mãozinha */
+}
+
+.btn-leia-mais:hover,
+a.btn-leia-mais:hover {
+  background-color: #84bcff;
+}
+
+.coluna-esquerda{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.servico-esquerda{
+  max-width: 600px;
+  color: #424242;
+}
+
+
+.servico-esquerda h2 {
+  color: #3991fc;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block; /* a linha terá a largura do texto */
+  margin-bottom: 15px;
+}
+
+.servico-esquerda h2::after {
+  content: "";
+  display: block;
+  width: 50px;       /* comprimento da linha */
+  height: 2px;       /* espessura da linha */
+  background-color: #575352; /* cor da linha */
+  margin-top: 5px;   /* espaço entre o título e a linha */
+}
+
+
+
+/* --- Media Query para mobile --- */
+@media (max-width: 768px) {
+  #servicos {
+    flex-direction: column;  /* empilha as colunas */
+    align-items: flex-start;     /* centraliza horizontalmente */
+    gap: 30px;               /* espaço entre colunas */
+    min-height: auto;        /* remove altura fixa */
+    padding: 20px 20px;      /* reduz padding lateral */
+  }
+
+  .servico-esquerda h2 {
+    font-size: 1.8rem;
+    text-align: left;      /* centraliza título */
+  }
+
+  .servico-esquerda h2::after {
+    margin: 10px auto 0 auto; /* linha abaixo do título, centralizada */
+    margin-left: 0;
+  }
+
+  .servico-esquerda,
+  .servico-direita {
+    max-width: 100%;        /* ocupam toda largura possível */
+    text-align: left;     /* centraliza textos */
+  }
+
+  .btn-leia-mais {
+    margin-left: 0;         /* centraliza o botão */
+  }
+}
