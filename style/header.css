@@ -1,7 +1,7 @@
 header{
     background-color:rgb(176, 240, 233);
     width: 100%;
-    padding: 18px 5vw;
+    padding: 18px 20px; 
     position: fixed;
     top: 0;
     left: 0;
@@ -13,12 +13,23 @@ header.scrolled {
     backdrop-filter: blur(8px); /* efeito vidro */
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
 #navbar{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+#navbar {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 
 #logo{
     width: 200px;
