@@ -1,3 +1,10 @@
+window.addEventListener("load", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  document.body.style.overflowX = "hidden";
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const btnArtigos = document.getElementById("btn-artigos");
     const artigos = document.getElementById("artigos");
