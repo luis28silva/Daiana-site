@@ -1,13 +1,16 @@
-header{
-    background-color:rgb(176, 240, 233);
+header {
+    background-color: rgb(176, 240, 233);
     width: 100%;
     padding: 18px 20px; 
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* fica sempre por cima */
+    z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    box-sizing: border-box; /* ✅ evita a folga lateral */
+    overflow-x: hidden; /* ✅ garante que nada vaze */
 }
+
 header.scrolled {
     background-color: rgba(176, 240, 233, 0.699); /* fica mais forte ao rolar */
     backdrop-filter: blur(8px); /* efeito vidro */
@@ -25,10 +28,6 @@ html, body {
     justify-content: space-between;
 }
 
-#navbar {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
 
 
 #logo{
@@ -89,18 +88,34 @@ nav a:hover::after {
     display: none;
 }
 
-@media screen and ( max-width:1170px) {
+
+
+.btn-mobile {
+  display: none; /* sem !important */
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #336eff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn-mobile * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width:1170px) {
     #desktop_list,
     #navbar .btn-desktop{
         display: none;
     }
-    .btn-mobile{
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #336eff;
+    .btn-mobile {
+        display: block; /* agora funciona */
     }
     #menu_mobile.active {
         display: flex;
@@ -113,7 +128,6 @@ nav a:hover::after {
         gap: 12px;
         margin: 12px 0px;
     }
-
     #mobile_list .nav_item{
         list-style: none;
         text-align: center;
