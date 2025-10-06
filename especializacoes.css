@@ -1,0 +1,144 @@
+
+/* CONTÊINER PRINCIPAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#especializacoes {
+  padding-top: 93.96px;    
+  background-color: #585858;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* BLOCO FLEX REUTILIZÁVEL */
+.bloco-flex {
+  display: flex;
+  width: 100%;
+  min-height: 70vh;
+}
+
+
+
+.especialidade-texto {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.especialidade-texto .paragrafo {
+  max-width: 400px;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  color: rgb(201, 201, 201);
+}
+
+.titulo {
+  color: #7de3d3;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.terapia-cognitiva{
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.especialidade-imagem {
+  width: 50%;
+  height: auto;
+}
+.especialidade-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* BLOCO 2 */
+.abordagem {
+  background-color: #7de3d3;
+}
+
+.abordagem-imagem {
+  width: 50%;
+  height: auto;
+}
+.abordagem-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.abordagem-texto {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.titulo-abordagem {
+  color: #242424;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.bloco-abordagem {
+  color: #242424;
+  font-size: 1rem;
+  max-width: 400px;
+  line-height: 1.2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bloco-flex {
+    flex-direction: column;
+  }
+
+  .especialidade-texto,
+  .especialidade-imagem,
+  .abordagem-texto,
+  .abordagem-imagem {
+    width: 100%;
+  }
+
+    /* mantém texto antes da imagem em Especialidades */
+  .especialidade-texto { order: 1; }
+  .especialidade-imagem { order: 2; }
+
+  /* inverte a ordem no bloco Abordagem */
+  .abordagem-texto { order: 1; }
+  .abordagem-imagem { order: 2; }
+
+
+  
+
+  .especialidade-texto,
+  .abordagem-texto {
+    padding: 1.5rem;
+  }
+
+  .especialidade-texto .paragrafo,
+  .abordagem {
+    max-width: 100%;
+  }
+}
